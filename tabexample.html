@@ -109,21 +109,17 @@
 									<p>Boot Tabs on click event</p>
 								</div>
 				
-								<div class="tab-pane" id="mps" data-src="sphere.html"><br><small></a></small>"&gt;
+								<div class="tab-pane" id="mps" data-src="sphere.html" ><br><small></a></small>
 									<iframe class="embed-responsive-item" src ="" allowfullscreen controls id="fullscreenapp" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 									<br>
-									<span class="oi oi-fullscreen-enter"></span>
-									<button onclick="openFullscreen();"  id="example-start-button"class="btn btn-success " >Fullscreen Mode</button>
-								  
-									<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
+                  <p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
 				  
 								</div>
 				
 								<div class="tab-pane" id="ytb" data-src="cube.html">
-									<iframe class="embed-responsive-item" src =""allowfullscreen controls id="fullscreenapp"  width="425" height="350" frameborder="0" allowfullscreen="allowFullScreen"></iframe>
+									<iframe class="embed-responsive-item" src ="" allowfullscreen controls id="fullscreenapp" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 									<br>
-									<span class="oi oi-fullscreen-enter"></span>
-									<button onclick="openFullscreen();"  id="example-start-button"class="btn btn-success " >Fullscreen Mode</button>
+								
 								  
 									<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
 				  
@@ -133,12 +129,13 @@
 								<div class="tab-pane" id="rn" data-src="cylindar.html">
 									<iframe class="embed-responsive-item" src =""allowfullscreen controls id="fullscreenapp"  width="425" height="350" frameborder="0" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen"></iframe>
 									<br>
-									<span class="oi oi-fullscreen-enter"></span>
-									<button onclick="openFullscreen();"  id="example-start-button"class="btn btn-success " >Fullscreen Mode</button>
+									
 								  
 									<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
 				  
 								</div>
+
+                
 							</div>
 						</div>
 					</div>
@@ -252,8 +249,24 @@
       </nav>
     </div>
   </div>
+
+  
 </footer>
 <!-- /footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- jQuery -->
 <script src="plugins/jQuery/jquery.min.js"></script>
@@ -296,7 +309,6 @@ $('#myTabs').click('show', function(e) {
 
 	
   
-  
 <script>
 	
 	(function() {
@@ -334,9 +346,34 @@ $('#myTabs').click('show', function(e) {
 
 </script>
 
+<script>
+  // Get all elements with class="tabcontent" and hide them
+  var tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 1; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  // <![CDATA[
+  function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
 
+    var tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
 
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
 
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  // ]]>
+</script>
 
 
 
