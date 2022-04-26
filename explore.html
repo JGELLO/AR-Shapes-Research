@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Dtox</title>
+  <title>Ar Shapes</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +28,122 @@
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+  <style>
+    
+    
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+     
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+    
+    #myBtn:hover {
+      background-color: #555;
+    }
+    </style>
+
+    <style>
+
+.sk-folding-cube {
+  margin: 20px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  }
+}
+
+    </style>
+
 </head>
 
 <body>
@@ -49,9 +165,9 @@
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
-          <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="nav-link page-scroll" href="#feature">Project</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="arshapes.html">AR Shapes</a>
           </li>
@@ -61,9 +177,9 @@
           <li class="nav-item">
             <a class="nav-link" href="explore.html">Explore</a>
           </li>
-          <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="nav-link page-scroll" href="#team">Team</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
@@ -78,107 +194,144 @@
 <!-- /navigation -->
 
 
-<!--Robot Interactive-->
-<section class="section-lg service-bg-image position-relative" style="background-image: url(images/backgrounds/service-page.png);">
-  <div class="container">
-      <div class="row">
-          <div class="col-12 text-center">
-              <h2 class="section-title">Insert Name</h2>
-<div class="embed-responsive embed-responsive-16by9  ">
-               
-  <iframe class="embed-responsive-item" src ="three.js-dev/examples/webgl_animation_skinning_morph.html" allowfullscreen controls id="fullscreenapp" width="600" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+<section class="section feature mb-0" id="modal">
+  <div class="container contact-bg p-5 rounded mb-5">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-title">Extras</h2>
+        <p class="mb-100">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>Excepteur sint occaecat cupidatat non proident</p>
+        <div class="col-lg-12">
+          <!-- about video -->
+          
 
-  
-</div>
-</section>
-<!--Voxel Placement-->
-<section class="section-lg service-bg-image position-relative" style="background-image: url(images/backgrounds/service-page.png);">
-  <div class="container">
-      <div class="row">
-          <div class="col-12 text-center">
-              <h2 class="section-title">Insert Name</h2>
-<div class="embed-responsive embed-responsive-16by9  ">
-               
-  <iframe class="embed-responsive-item" src ="three.js-dev/examples/webgl_interactive_voxelpainter.html" allowfullscreen controls id="fullscreenapp" width="600" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-</div>
-</section>
-<!--fps example-->
-<section class="section-lg service-bg-image position-relative" style="background-image: url(images/backgrounds/service-page.png);">
-  <div class="container">
-      <div class="row">
-          <div class="col-12 text-center">
-              <h2 class="section-title">Insert Name</h2>
-<div class="embed-responsive embed-responsive-16by9  ">
-               
-  <iframe class="embed-responsive-item" src ="three.js-dev/examples/games_fps.html" allowfullscreen controls id="fullscreenapp" width="600" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-</div>
-</section>
-<!--Minecraft-->
-<section class="section-lg service-bg-image position-relative" style="background-image: url(images/backgrounds/service-page.png);">
-  <div class="container">
-      <div class="row">
-          <div class="col-12 text-center">
-              <h2 class="section-title">Insert Name</h2>
-<div class="embed-responsive embed-responsive-16by9  ">
-               
-  <iframe class="embed-responsive-item" src ="three.js-dev/examples/webgl_geometry_minecraft.html" allowfullscreen controls id="fullscreenapp" width="600" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-</div>
-</section>
+          
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+             <div class="about-video">
+            <img class="img-fluid w-40" src="images/extras/voxel.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+            <a class="venobox play-btn" href="three.js-dev/examples/webgl_interactive_voxelpainter.html" data-vbtype="iframe"><i class="ti-control-play"></i></a>
+          </div>
+          <br>
+            <h4>Voxel Painter</h4>
+            <p>DES</p>
+          </div>
+        </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/skinning morp.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="three.js-dev/examples/webgl_animation_skinning_morph.html" data-vbtype="iframe"><i class="ti-control-play"></i></a>
+         </div>
+         <br>
+           <h4>Skinning Morp</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
 
-<!-- contact -->
-<section class="section-lg contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-title">Contact</h2>
-            </div>
         </div>
-        <div class="row contact-bg p-5 rounded mb-5">
-            <div class="col-lg-7 mb-4 mb-lg-0">
-                <form action="#">
-                    <input type="text" class="form-control mb-3" id="name" name="name" placeholder="Your Name">
-                    <input type="email" class="form-control mb-3" id="mail" name="mail" placeholder="Your Email">
-                    <input type="text" class="form-control mb-3" id="subject" name="subject" placeholder="Subject">
-                    <textarea name="message" id="message" class="form-control mb-3" placeholder="Your Message"></textarea>
-                    <button type="submit" value="send" class="btn btn-secondary">SEND MESSAGE</button>
-                </form>
-            </div>
-            <div class="col-lg-5">
-                <p class="mb-5">If you'll like to know more about our application designing. With dedicated engineers on-hand 24/7,      we’re set up to become an extension of your team.</p>
-                <a href="tel:+442081446356" class="text-color h5 d-block">+44 20 8144 6356</a>
-                <a href="mailto:info@altostack.io" class="mb-5 text-color h5 d-block">info@altostack.io</a>
-                <p>71 Shelton Street<br>St Nicholas Inn Cagayan de Oro</p>
-            </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/game fps.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="three.js-dev/examples/games_fps.html" data-vbtype="iframe"><i class="ti-control-play"></i></a>
+         </div>
+         <br>
+           <h4>FPS game</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
+
         </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                <div class="card p-4 border-blue">
-                    <h5><i class="ti-layers-alt round-icon blue mr-2"></i> Gerald Stephen Navarro</h5>
-                    <p class="mb-0">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                <div class="card p-4 border-blue">
-                    <h5><i class="ti-desktop round-icon green mr-2"></i> Angelo Cablauna</h5>
-                    <p class="mb-0">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                <div class="card p-4 border-blue">
-                    <h5><i class="ti-panel round-icon orange mr-2"></i> Luigi Tejada</h5>
-                    <p class="mb-0">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-                </div>
-            </div>
+      </div>
+      <!-- feature item -->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/Minecraft.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="three.js-dev/examples/webgl_geometry_minecraft.html" data-vbtype="iframe"><i class="ti-control-play"></i></a>
+         </div>
+         <br>
+           <h4>Minecraft</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
+
+         
+
         </div>
+      </div>
+
+
+      <!--Robot dancing-->
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/cube.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="three.js-dev/examples/webgl_materials_texture_canvas.html" data-vbtype="iframe"><i class="ti-control-play"></i></a>
+         </div>
+         <br>
+           <h4>Cube Draw</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
+
+         
+
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-80">
+        <div class="d-flex feature-item">
+          
+          <div>
+            <div class="about-video">
+           <img class="img-fluid w-40" src="images/extras/sphere-min.gif" alt="video-thumb" style="width:100%;max-width:500px" >
+           <a class="venobox play-btn" href="three.js-dev/examples/webgl_lightprobe_cubecamera.html" data-vbtype="iframe"><i class="ti-control-play"></i></a>
+         </div>
+         <br>
+           <h4>Sphere Rotate</h4>
+           <p>Consectetur adipiscing elit donec tempus
+             pellentesque dui.</p>
+         </div>
+
+         
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
     </div>
-    <!-- background shapes -->
-    <img class="contact-bg-1 up-down-animation" src="images/background-shape/feature-bg-2.png" alt="background-shape">
-    <img class="contact-bg-2 left-right-animation" src="images/background-shape/green-half-cycle.png" alt="background-shape">
-    <img class="contact-bg-3 up-down-animation" src="images/background-shape/green-dot.png" alt="background-shape">
-    <img class="contact-bg-4 left-right-animation" src="images/background-shape/service-half-cycle.png" alt="background-shape">
-    <img class="contact-bg-5 up-down-animation" src="images/background-shape/feature-bg-2.png" alt="background-shape">
+  </div>
+  <img class="feature-bg-1 up-down-animation" src="images/background-shape/feature-bg-1.png" alt="bg-shape">
+  <img class="feature-bg-2 left-right-animation" src="images/background-shape/feature-bg-2.png" alt="bg-shape">
 </section>
-<!-- /contact -->
+<!-- contact -->
+
 
 <!-- footer -->
 <footer class="footer-section footer" style="background-image: url(images/backgrounds/footer-bg.png);">
@@ -194,10 +347,10 @@
       <nav class="col-lg-8 align-self-center mb-5">
         <ul class="list-inline text-lg-right text-center footer-menu">
           <li class="list-inline-item active"><a href="index.html">Home</a></li>
-          <li class="list-inline-item"><a class="page-scroll" href="#feature">Feature</a></li>
-          <li class="list-inline-item"><a href="about.html">About</a></li>
-          <li class="list-inline-item"><a class="page-scroll" href="#team">Team</a></li>
-          <li class="list-inline-item"><a class="page-scroll" href="#pricing">Pricing</a></li>
+     
+          <li class="list-inline-item"><a class="nav-link" href="arshapes.html">AR Shapes</a></li>
+          <li class="list-inline-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+          <li class="list-inline-item"><a class="nav-link" href="explore.html">Explore</a></li>
           <li class="list-inline-item"><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
